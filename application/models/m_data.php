@@ -1,7 +1,7 @@
 <?php
-class M_data extends CI_Model{
+class m_data extends CI_Model{
 
-    function input_data($data,$table){
+    function input_data($data,$table) {
         $this->db->insert($table,$data);
 
     }
@@ -10,17 +10,17 @@ class M_data extends CI_Model{
         return $this->db->get('mahasiswa');
     }
     function edit_data($where,$table) {
-        $this->db->where($where);
+        return $this->db->get_where($table,$where);
     }
 
     function update_data($where,$data,$table) {
         $this->db->where($where);
-        $this->db->update($table,$data);  
+        $this->db->update($table,$data);
     }
-
+    
     function hapus_data($where,$table) {
         $this->db->where($where);
-        $this->db->delete($table);  
+        $this->db->delete($table);
     }
 }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2021 at 10:19 AM
+-- Generation Time: Oct 14, 2021 at 11:42 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -29,11 +29,12 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `mahasiswa` (
   `id` int(11) NOT NULL,
-  `nim` varchar(8) CHARACTER SET latin1 DEFAULT NULL,
-  `nama` varchar(50) CHARACTER SET latin1 DEFAULT NULL,
-  `alamat` text CHARACTER SET latin1 DEFAULT NULL,
-  `pekerjaan` varchar(50) CHARACTER SET latin1 DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `nim` varchar(8) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `alamat` text NOT NULL,
+  `pekerjaan` varchar(50) NOT NULL,
+  `foto` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
